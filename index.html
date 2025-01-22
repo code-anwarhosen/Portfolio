@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Anwar Hosen | Personal Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', function () {
+          const heroSectionHeight = document.querySelector('#hero').offsetHeight;
+          
+          if (window.scrollY > heroSectionHeight - 200) {
+            nav.classList.add('bg-gray-900');
+            nav.classList.remove('bg-blue-500');
+          } else {
+            nav.classList.add('bg-blue-500');
+            nav.classList.remove('bg-gray-900');
+        }
+      });
+    });
+  </script>
+</head>
+<body class="bg-gray-900 text-gray-200">
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full bg-blue-500 text-gray-200 font-normal shadow-lg z-50 transition-colors duration-300">
+    <div class="max-w-6xl mx-auto px-4 flex justify-center items-center py-4">
+      <ul class="flex space-x-6">
+        <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="h-screen bg-gradient-to-b from-blue-500 to-gray-900 flex flex-col items-center justify-center text-center pt-16">
+    <div class="mb-6">
+      <img src="images/avatar.jpg" alt="Picture" class="w-[300px] h-[300px] rounded-full border-1 border-white shadow-lg">
+    </div>
+    <h1 class="text-4xl font-extrabold text-white mb-4">Anwar Hosen</h1>
+    <p class="text-x text-gray-300 mb-6">A Learner and Developer Crafting Web Solutions with Creativity</p>
+    <a href="#about" class="px-4 py-2 bg-blue-600 text-white font-medium rounded hover:bg-blue-500 transition">Learn More</a>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="py-16 px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
+      <p class="text-center text-gray-400">
+        Hi, I'm Anwar Hosen, a passionate web developer with experience in creating stunning and functional web applications.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 px-8 bg-gray-800">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="flex flex-col items-center">
+          <img src="images/icons/python.png" alt="HTML" class="w-16 h-16 mb-2">
+          <p>Python</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="images/icons/django.png" alt="CSS" class="w-16 h-16 mb-2">
+          <p>Django</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="images/icons/js.png" alt="JavaScript" class="w-16 h-16 mb-2">
+          <p>JavaScript</p>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="images/icons/tailwindcss.png" alt="TailwindCSS" class="w-16 h-16 mb-2">
+          <p>TailwindCSS</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 px-8">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <!-- Example Project Card -->
+        <div class="bg-gray-800 rounded-lg p-6">
+          <a href="images/projects/poke.png" target="_blank">
+            <img src="images/projects/poke.png" alt="Project" class="rounded-lg mb-4">
+          </a>
+          <h3 class="text-xl font-bold">Poke</h3>
+          <p class="text-gray-400">A real-time chatting application.</p>
+          <a href="https://poke.anwarhosen.xyz" target="_blank" class="text-blue-400 hover:underline">View Project</a>
+        </div>
+        <!-- Add more project cards as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-8 bg-gray-800">
+    <div class="max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8">Contact Me</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-gray-700 text-gray-200">
+        <input type="email" placeholder="Your Email" class="w-full p-3 rounded bg-gray-700 text-gray-200">
+        <textarea placeholder="Your Message" rows="5" class="w-full p-3 rounded bg-gray-700 text-gray-200"></textarea>
+        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white py-3 rounded">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Social Links Section -->
+  <!-- <section class="py-8 px-8 bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-4">Follow Me</h2>
+      <div class="flex justify-center space-x-6">
+        <a href="#" class="text-blue-400 hover:text-blue-500" aria-label="Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+          </svg>
+        </a>
+        <a href="#" class="text-blue-600 hover:text-blue-700" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-gray-500" aria-label="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6">
+            <path d="M12 2a10 10 0 00-3.16 19.48c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34a2.66 2.66 0 00-1.11-1.46c-.91-.62.07-.61.07-.61a2.12 2.12 0 011.54 1 2.14 2.14 0 002.92.83 2.16 2.16 0 01.64-1.35c-2.22-.25-4.55-1.11-4.55-4.93a3.87 3.87 0 011-2.69 3.61 3.61 0 01.1-2.65s.84-.27 2.75 1a9.43 9.43 0 015 0c1.91-1.31 2.75-1 2.75-1a3.61 3.61 0 01.1 2.65 3.87 3.87 0 011 2.69c0 3.83-2.34 4.67-4.57 4.92a2.42 2.42 0 01.7 1.88v2.79c0 .27.18.58.7.48A10 10 0 0012 2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Footer -->
+  <footer class="py-4 text-center bg-gray-900 text-gray-400">
+    <p>&copy; 2025 - All rights reserved.</p>
+  </footer>
+</body>
+</html>
