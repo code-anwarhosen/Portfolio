@@ -9,5 +9,5 @@ module.exports = {
   plugins: [],
 }
 
-// command: npx tailwindcss -i ./css/input.css -o ./css/style.css
-// docker run -d -p 90:80 --name portfolio -v ./:/usr/share/nginx/html:ro nginx:latest
+// npx tailwindcss -i ./css/input.css -o ./css/style.css
+// docker run -d -p 90:80 --name portfolio -v ./:/usr/share/nginx/html:ro --restart unless-stopped nginx:alpine
